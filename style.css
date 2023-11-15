@@ -7,7 +7,7 @@ body {
 .header {
     background: rgb(140,123,105);
     color: rgb(251,253,229);
-    font-family: 'Gaegu';
+    /* font-family: 'Gaegu'; */
     margin-top: 20px;
     margin-left: 30%;
     margin-right: 30%;
