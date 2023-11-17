@@ -41,6 +41,9 @@ body {
   .food {
     color:  darkorange;
   }
-  .waterinput{
-    padding 10px 5px
+ 
+  .foodtable, tr, th, td{
+    border: 1px solid black;
+    box-align: center;
+    
   }
