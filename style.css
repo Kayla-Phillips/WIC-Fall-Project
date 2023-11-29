@@ -47,3 +47,27 @@ body {
     box-align: center;
     
   }
+
+  .buttonS {
+    background-color: purple;
+    color:beige;
+    border-radius: 12px;
+  }
+  .buttonW {
+    background-color: lightblue;
+    color:beige;
+    border-radius:12px ;
+    border:none;
+  }
+  .buttonWA {
+    background-color: lightblue;
+    color:beige;
+    border-radius: 100px;
+    border:none;
+  }
+  .buttonF {
+    background-color: darkorange;
+    color:beige;
+    border-radius: 12px;
+    border:1px solid gray;
+  }
