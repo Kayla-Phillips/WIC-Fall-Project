@@ -12,7 +12,19 @@
     <button type="button" class="buttonW">add bottle</button><input type="number">
     <p>bottle: 0</p>
     <p>ounces: 0</p>
-    <p>daily goal:</p><p id="goal">0</p><button class="buttonWA" onclick="addW()">+</button><button class="buttonWA" id="minusW">-</button>
+    <p>daily goal:</p><p id="goal">0</p><button id="buttonWA" class="buttonWA" onclick="addW()">+</button><button id="buttonWM" class="buttonWA" id="minusW">-</button>
+    <script>
+        const add = document.getElementById("buttonWA");
+        const minus = document.getElementById("buttonWM");
+        const goal = document.getElementById("goal");
+        add.addEventListener("click", function(1){
+
+        });
+        minus.addEventListener("click", function(-1){
+            
+        });
+
+    </script>
     <p>congrats you reached your goal!!!</p>
     <p>one more bottle. almost there!</p>
   </div>
