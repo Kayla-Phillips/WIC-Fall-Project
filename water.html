@@ -9,19 +9,29 @@
 <div class="water">
     <br>
     <h2>Water</h2>
-    <button type="button" class="buttonW">add bottle</button><input type="number">
+    <button type="button" class="buttonW">add bottle</button>
+    <input type="number">
     <p>bottle: 0</p>
     <p>ounces: 0</p>
-    <p>daily goal:</p><p id="goal">0</p><button id="buttonWA" class="buttonWA" onclick="addW()">+</button><button id="buttonWM" class="buttonWA" id="minusW">-</button>
+    <p>daily goal:</p>
+    <p id="goal">0</p>
+    <button id="buttonWA" class="buttonW">+</button>
+    <button id="buttonWM" class="buttonW">-</button>
     <script>
         const add = document.getElementById("buttonWA");
         const minus = document.getElementById("buttonWM");
         const goal = document.getElementById("goal");
-        add.addEventListener("click", function(1){
 
+        let goalCount = 0;
+
+        add.addEventListener("click", function() {
+        goalCount++;
+        goal.innerHTML = goalCount;
         });
-        minus.addEventListener("click", function(-1){
-            
+
+        minus.addEventListener("click", function(){
+        goalCount--;
+        goal.innerHTML = goalCount;
         });
 
     </script>
