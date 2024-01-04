@@ -6,36 +6,58 @@
     <link rel = "stylesheet" href = "style.css">
     <link href='https://fonts.googleapis.com/css?family=Gaegu' rel='stylesheet'>
 </head>
+
 <div class="water">
     <br>
     <h2>Water</h2>
-    <button type="button" class="buttonW">add bottle</button>
-    <input type="number">
-    <p>bottle: 0</p>
-    <p>ounces: 0</p>
+    <button type="button" id="addBot" class="buttonW">add bottle(s)</button>
+    <input type="number" id="numIn" value="0">
+
+    <p>bottles:</p>
+    <p id="numBottles">0</p>
+    <p>ounces:</p>
+    <p id="numOunces">0</p>
     <p>daily goal:</p>
     <p id="goal">0</p>
-    <button id="buttonWA" class="buttonW">+</button>
+
     <button id="buttonWM" class="buttonW">-</button>
+    <button id="buttonWA" class="buttonW">+</button>
+    <p>congrats you reached your goal!!!</p>
+    <p>one more bottle. almost there!</p>
+
     <script>
-        const add = document.getElementById("buttonWA");
-        const minus = document.getElementById("buttonWM");
+        //daily goal
+        const addGoal = document.getElementById("buttonWA");
+        const minusGoal = document.getElementById("buttonWM");
         const goal = document.getElementById("goal");
 
         let goalCount = 0;
 
-        add.addEventListener("click", function() {
+        addGoal.addEventListener("click", function(){
         goalCount++;
         goal.innerHTML = goalCount;
         });
 
-        minus.addEventListener("click", function(){
+        minusGoal.addEventListener("click", function(){
         goalCount--;
         goal.innerHTML = goalCount;
         });
 
+        //add bottle
+        const addBottle = document.getElementById("addBot");
+        const inputBottles = document.getElementById("numIn");
+        const numBottles = document.getElementById("numBottles");
+        const numOunces = document.getElementById("numOunces");
+
+
+        addBottle.addEventListener("click", function(){
+        numBottles.innerHTML = inputBottles.valueAsNumber;
+        numOunces.innerHTML = inputBottles.valueAsNumber * 16.9;
+        });
+
+
+
     </script>
-    <p>congrats you reached your goal!!!</p>
-    <p>one more bottle. almost there!</p>
+
   </div>
   <a href="index.html">return home</a>
