@@ -22,10 +22,15 @@
 
     <button id="buttonWM" class="buttonW">-</button>
     <button id="buttonWA" class="buttonW">+</button>
-    <p>congrats you reached your goal!!!</p>
-    <p>one more bottle. almost there!</p>
+    <p id="goalMetMessage">congrats, you reached your goal!!!</p>
+    <p id="oneMoreMessage">one more bottle. almost there!</p>
+    <p id="keepGoingMessage">great job! keep going!</p>
 
     <script>
+        document.getElementById("goalMetMessage").style.visibility = 'hidden';
+        document.getElementById("oneMoreMessage").style.visibility = 'hidden';
+        document.getElementById("keepGoingMessage").style.visibility = 'hidden';
+
         //daily goal
         const addGoal = document.getElementById("buttonWA");
         const minusGoal = document.getElementById("buttonWM");
@@ -53,6 +58,25 @@
         addBottle.addEventListener("click", function(){
         numBottles.innerHTML = inputBottles.valueAsNumber;
         numOunces.innerHTML = inputBottles.valueAsNumber * 16.9;
+        
+        if(numBottles.innerHTML >= goal.innerHTML){
+            document.getElementById("goalMetMessage").style.visibility = 'visible';
+            document.getElementById("oneMoreMessage").style.visibility = 'hidden';
+            document.getElementById("keepGoingMessage").style.visibility = 'hidden';
+        }
+
+        if(numBottles.innerHTML == (goal.innerHTML - 1)){
+            document.getElementById("oneMoreMessage").style.visibility = 'visible';
+            document.getElementById("goalMetMessage").style.visibility = 'hidden';
+            document.getElementById("keepGoingMessage").style.visibility = 'hidden';
+        }
+
+        if(numBottles.innerHTML < (goal.innerHTML - 1)){
+            document.getElementById("keepGoingMessage").style.visibility = 'visible';
+            document.getElementById("goalMetMessage").style.visibility = 'hidden';
+            document.getElementById("oneMoreMessage").style.visibility = 'hidden';
+        }
+
         });
 
 
